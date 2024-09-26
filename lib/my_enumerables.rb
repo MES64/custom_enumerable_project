@@ -11,6 +11,14 @@ module Enumerable
       idx += 1
     end
   end
+
+  def my_select
+    selected_items = []
+    my_each do |item|
+      selected_items << item if yield(item)
+    end
+    selected_items
+  end
 end
 
 # You will first have to define my_each
