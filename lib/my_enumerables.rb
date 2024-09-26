@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Edit built-in Enumerable module
 module Enumerable
   # Your code goes here
 end
