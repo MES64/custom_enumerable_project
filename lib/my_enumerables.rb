@@ -11,4 +11,9 @@ end
 # to this method
 class Array
   # Define my_each here
+  def my_each
+    for item in self do
+      yield(item)
+    end
+  end
 end
