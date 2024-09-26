@@ -19,6 +19,13 @@ module Enumerable
     end
     selected_items
   end
+
+  def my_all?
+    my_each do |item|
+      return false unless yield(item)
+    end
+    true
+  end
 end
 
 # You will first have to define my_each
