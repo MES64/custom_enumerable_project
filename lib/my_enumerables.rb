@@ -4,15 +4,12 @@
 module Enumerable
   # Your code goes here
 
-  def my_each_with_index(&block)
-    item_index_pair = []
+  def my_each_with_index
     idx = 0
     my_each do |item|
-      item_index_pair << [item, idx]
+      yield(item, idx)
       idx += 1
     end
-    item_index_pair.my_each(&block)
-    self
   end
 end
 
